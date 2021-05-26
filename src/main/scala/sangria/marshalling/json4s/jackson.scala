@@ -80,7 +80,7 @@ object jackson extends Json4sJacksonSupportLowPrioImplicits {
 
     def isScalarNode(node: JValue) =
       node match {
-        case _: JBool | _: JNumber | _: JString => true
+        case _: JBool | _: JInt | _: JDouble | _: JLong | _: JDecimal | _: JString => true
         case _ => false
       }
 
